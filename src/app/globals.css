@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "PokemonClassic";
+  src: url("/PokemonClassic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --background: #f8f0d9;
+  --foreground: #3888f0;
+  --text: #29302e;
+}
+
+@theme inline {
+  --color-primary: var(--foreground);
+  --color-secondary: var(--background);
+  --color-accent: var(--text);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --color-primary-dark: #4267a4;
+  --color-secondary-dark: #a0a2a5;
+  --color-secondary-shadow: #d4cbba;
+  --font-poke: "PokemonClassic";
+  --animate-wiggle: wiggle 0.75s ease-in-out infinite;
+    @keyframes wiggle {
+      0%,
+      100% {
+        transform: rotate(-9deg);
+      }
+      50% {
+        transform: rotate(9deg);
+      }
+    }
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
